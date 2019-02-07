@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\People;
 use Illuminate\Http\Request;
+use App\Http\Requests\PeopleRequest;
 
 class PeopleController extends Controller
 {
@@ -33,7 +34,7 @@ class PeopleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PeopleRequest $request)
     {
         $p = new People;
         $p->lastname = $request->input('lastname');
